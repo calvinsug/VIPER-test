@@ -94,8 +94,8 @@ import UIKit
         self.isOpaque = false
         self.contentMode = UIViewContentMode.redraw
         
-        let handlePanSelector: Selector = "handlePan:"
-        self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: handlePanSelector))
+        //let handlePanSelector: Selector = "handlePan:"
+        //self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.handlePan(recognizer:))))
     }
     
     // MARK: Drawing

@@ -72,11 +72,13 @@ class MainViewController: UIViewController {
     
     @IBAction func onButtonTouched() {
         loadingButton!.startLoadingAnimationWithTitle(newTitle: "Analyzing...", inTime: 0.3)
-        var timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: Selector("stopLoading"), userInfo: nil, repeats: false)
+        var timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(self.stopLoading), userInfo: nil, repeats: false)
     }
     
-    func stopLoading() {
+    @objc func stopLoading() {
+        print("Stop Loading")
         loadingButton!.stopLoadingAnimationWithTitle(newTitle: "Done!", inTime: 0.3)
+        print("After Stop Loading")
     }
     
     func buttonPushed() -> () {
